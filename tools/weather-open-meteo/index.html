@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard de Clima (Open-Meteo) — Pituach</title>
+  <meta name="description" content="Dashboard de clima sem API key — Open-Meteo + Nominatim" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Clima (sem chave) — Pituach</h1>
+      <div class="controls">
+        <button id="btn-locate" title="Usar minha localização" aria-label="Usar minha localização">📍</button>
+        <select id="unitToggle" aria-label="Alternar unidade">
+          <option value="metric">C°</option>
+          <option value="imperial">F°</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="search-panel" aria-labelledby="search-label">
+      <h2 id="search-label">Pesquisar cidade</h2>
+      <form id="searchForm" class="search-form" aria-label="Formulário de pesquisa de cidade">
+        <input id="inputCity" type="search" placeholder="Ex.: Rio de Janeiro" aria-label="Nome da cidade" required />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div class="recent">
+        <h3>Pesquisas recentes</h3>
+        <ul id="recentList" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <section class="weather-panel" aria-live="polite" aria-atomic="true">
+      <div id="message" class="message" hidden></div>
+
+      <article id="currentCard" class="card current" hidden>
+        <div class="card-header">
+          <h2 id="locationName">—</h2>
+          <small id="currentDate">—</small>
+        </div>
+        <div class="card-body">
+          <div class="weather-main">
+            <div id="currentIcon" style="font-size:64px">☁️</div>
+            <div>
+              <div id="currentTemp" class="temp">--°</div>
+              <div id="currentDesc" class="desc">—</div>
+            </div>
+          </div>
+          <div class="weather-meta">
+            <div>Sensação: <span id="feelsLike">--°</span></div>
+            <div>Umidade: <span id="humidity">--%</span></div>
+            <div>Vento: <span id="wind">--</span></div>
+            <div>Pressão: <span id="pressure">-- hPa</span></div>
+          </div>
+        </div>
+      </article>
+
+      <section id="forecast" class="forecast" hidden>
+        <h3>Previsão</h3>
+        <div id="forecastGrid" class="forecast-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Dados: Open-Meteo &amp; Nominatim (sem necessidade de API key) • Projeto exemplo</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app-open-meteo.js"></script>
+</body>
+</html>
