@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato — Pituach</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script async src="https://embed.calendly.com/assets/external/widget.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link"><img src="assets/logo.svg" alt="Pituach" class="logo" /></a>
+      <nav class="main-nav">
+        <a href="index.html">Início</a>
+        <a href="about.html">Sobre</a>
+        <a href="services.html">Serviços</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contato</a>
+        <a class="btn-cta" href="https://wa.me/5521994060812" target="_blank" rel="noopener">Pedir Agora</a>
+      </nav>
+      <button id="btn-menu" class="btn-menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:120px">
+    <h1>Contato</h1>
+    <p>Agende uma consulta ou solicite um orçamento. Preferimos WhatsApp para respostas rápidas.</p>
+
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
+      <div>
+        <h3>Formulário</h3>
+        <form action="assets/form/contact.php" method="post">
+          <label>Nome*<input type="text" name="name" required></label><br><br>
+          <label>Email*<input type="email" name="email" required></label><br><br>
+          <label>Telefone<input type="text" name="phone"></label><br><br>
+          <label>Serviço de interesse
+            <select name="service">
+              <option>Site Institucional</option>
+              <option>E-commerce</option>
+              <option>Agendamento</option>
+              <option>Manutenção</option>
+            </select>
+          </label><br><br>
+          <label>Mensagem*<textarea name="message" rows="5" required></textarea></label><br><br>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+
+      <div>
+        <h3>Outras formas de contato</h3>
+        <p>WhatsApp: <a href="https://wa.me/5521994060812" target="_blank" rel="noopener">(+55) 21 99406-0812</a></p>
+        <p>Email: contato@pituach.dev.br</p>
+        <p>Endereço: (opcional) — insira seu endereço aqui</p>
+
+        <h4>Agendamento rápido</h4>
+        <!-- Opcional: embed Calendly
+        <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_ACCOUNT/30min" style="min-width:320px;height:630px;"></div>
+        -->
+        <p>Ou abra o WhatsApp para iniciar uma conversa imediata.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"> ... </footer>
+  <a class="whatsapp-float" href="https://wa.me/5521994060812" target="_blank" rel="noopener"><img src="assets/icons/whatsapp-white.svg" alt="WhatsApp" /></a>
+  <button id="backToTop" class="back-to-top">↑</button>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

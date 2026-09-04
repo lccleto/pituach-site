@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <rect width="100%" height="100%" fill="#031a5b" rx="20"/>
+  <g transform="translate(24,32)">
+    <text x="0" y="48" fill="#b9bdc2" font-family="Poppins, Arial, sans-serif" font-size="48" font-weight="700">PITUACH</text>
+    <text x="0" y="86" fill="#b9bdc2" font-family="Inter, Arial, sans-serif" font-size="14">Agência de Desenvolvimento Digital</text>
+    <!-- stylized arrow -->
+    <g transform="translate(280,8) scale(0.9)">
+      <path d="M10 80 C40 20, 90 20, 120 80" fill="none" stroke="#00bcd4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+      <path d="M112 72 L136 96 L120 100 L116 84 Z" fill="#00bcd4" opacity="0.95"/>
+    </g>
+  </g>
+</svg>
